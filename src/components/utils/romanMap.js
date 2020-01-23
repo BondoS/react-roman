@@ -1,21 +1,21 @@
 const map = {
-  1: 'I',
-  5: 'V',
-  10: 'X',
-  50: 'L',
-  100: 'C',
-  500: 'D',
-  1000: 'M',
-  5000: 'V̅',
-  10000: 'X̅',
-  50000: 'L̅',
-  100000: 'C̅',
-  500000: 'D̅',
-  1000000: 'M̅'
+  I: 1,
+  V: 5,
+  X: 10,
+  L: 50,
+  C: 100,
+  D: 500,
+  M: 1000,
+  V̅: 5000,
+  X̅: 10000,
+  L̅: 50000,
+  C̅: 100000,
+  D̅: 500000,
+  M̅: 1000000
 };
 
 export default map;
 
-export const getDecimalFromRoman = roman => {
-  return Number(Object.keys(map).find(decimal => map[decimal] === roman)) || -1;
+export const getRomanFromDecimal = decimal => {
+  return Object.keys(map).find(roman => map[roman] === decimal) || -1;
 };
