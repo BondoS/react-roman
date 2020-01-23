@@ -1,9 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { mount } from 'enzyme';
 import App from './App';
+import Main from './components/main';
 
 test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const wrapper = mount(<App />);
+  // console.log(wrapper.debug());
+  expect(wrapper.find(Main).exists()).toBeTruthy();
 });
