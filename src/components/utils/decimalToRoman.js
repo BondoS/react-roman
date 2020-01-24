@@ -35,7 +35,10 @@ export default decimal => {
       case 6:
       case 5:
         currRes.push(romanRange[1]);
-        currRes = currRes.concat(Array(+currentNumber - 5).fill(romanRange[0]));
+        currRes = [
+          ...currRes,
+          ...Array(+currentNumber - 5).fill(romanRange[0])
+        ];
         break;
       case 4:
         currRes.push(romanRange[0]);
@@ -44,12 +47,12 @@ export default decimal => {
       case 3:
       case 2:
       case 1:
-        currRes = currRes.concat(Array(+currentNumber).fill(romanRange[0]));
+        currRes = [...currRes, ...Array(+currentNumber).fill(romanRange[0])];
         break;
       default:
         return -1;
     }
-    fullRes = fullRes.concat(currRes);
+    fullRes = [...fullRes, ...currRes];
   }
   return fullRes.join('');
 };
