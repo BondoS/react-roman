@@ -1,8 +1,12 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-plusplus */
-import romanDecimalMap from './romanMap';
+import romanDecimalMap, { getRomanFromDecimal } from './romanMap';
 
 export default decimal => {
+  console.log('decimal', decimal);
+  if (Object.values(romanDecimalMap).includes(decimal))
+    return getRomanFromDecimal(decimal);
+
   const numArr = decimal.toString().split('');
   let fullRes = [];
   // loop over each single digit, and calculate how many zeros responds to the current digit
@@ -48,6 +52,8 @@ export default decimal => {
       case 2:
       case 1:
         currRes = [...currRes, ...Array(+currentNumber).fill(romanRange[0])];
+        break;
+      case 0:
         break;
       default:
         return -1;
