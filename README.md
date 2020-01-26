@@ -9,4 +9,5 @@
   - Validating operations
     - Division, must be by total numbers with no remaining, `x % y === 0`.
     - Subtraction, first number must be larger than the second.
+- The application supports the [`Combining Overline`](https://www.compart.com/en/unicode/U+0305) `(U+0305)` character whether in conversion or validation.
 - UI meant to be basic, more abstraction and enhancement may be done in the future.
