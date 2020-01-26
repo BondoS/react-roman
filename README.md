@@ -1,6 +1,5 @@
 - Conversion from decimal to roman is calculated using the "subtractive" notation, not "additive" notation [Wikipedia](https://en.wikipedia.org/wiki/Roman_numerals).
   - Which means `I, II, III, IV, V, VI, VII, VIII, IX, X.` NOT `I, II, III, IIII, V, VI, VII, VIII, VIIII, X`, please notice the difference in `4` and `9`
-- It is better to calculate numbers less than `3999` but I have included support to `1,000,000` one million which is **`M̅`** in roman numbers.
 - This calculator works accurately if the result is less than or equal `3,999,999`.
 - Is can be easily modified to support more calculations by adding the correct numbers to `src/utils/romanMap.js` file.
 - There is two validation techniques for this calculator.
