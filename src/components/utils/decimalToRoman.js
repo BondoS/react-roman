@@ -3,7 +3,6 @@
 import romanDecimalMap, { getRomanFromDecimal } from './romanMap';
 
 export default decimal => {
-  console.log('decimal', decimal);
   if (Object.values(romanDecimalMap).includes(decimal))
     return getRomanFromDecimal(decimal);
 

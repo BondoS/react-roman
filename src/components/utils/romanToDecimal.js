@@ -15,9 +15,7 @@ export default roman => {
       numArr.push(roman.slice(i, i + 1));
     }
   }
-  console.log('numArr', numArr);
   return numArr.reduce((acc, curr, i, arr) => {
-    // console.log('curr', curr);
     // if the current number is less than the next number
     return map[curr] < map[arr[i + 1]]
       ? // subtract it from the accumulative
